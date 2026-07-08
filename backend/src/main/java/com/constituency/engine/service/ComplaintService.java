@@ -63,8 +63,9 @@ public class ComplaintService {
             } else if (classification.getWard() != null) {
                 // simple substring match for prototype, ideally should be robust
                 List<Ward> wards = wardRepository.findAll();
+                final String classificationWard = classification.getWard();
                 Ward matchedWard = wards.stream()
-                        .filter(w -> w.getName().toLowerCase().contains(classification.getWard().toLowerCase()))
+                        .filter(w -> w.getName().toLowerCase().contains(classificationWard.toLowerCase()))
                         .findFirst()
                         .orElse(null);
                 complaint.setWard(matchedWard);
