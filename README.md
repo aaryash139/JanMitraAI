@@ -72,6 +72,6 @@ The frontend will start on `http://localhost:5173`.
 The project is configured for seamless deployment:
 1. **Dockerfile** is included in the `backend` directory for deploying the Spring Boot application to container services like Render or Koyeb.
 2. The **React Frontend** reads the backend API URL dynamically using the `VITE_API_URL` environment variable, making it ready for Vercel/Netlify deployments.
-
+Deployment Link: https://jan-mitra-ai-iota.vercel.app/
 ## 🛡 License
 This project is proprietary and developed for prototyping and demonstration purposes.
